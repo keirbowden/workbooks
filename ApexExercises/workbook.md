@@ -33,6 +33,10 @@ The Sales Manager for a large enterprise has found that the marketing team are c
 
 A validation rule is required that ensures at least one of these fields is populated, and blocks the save with an appropriate error message if this is not the case.
 
+Hint: You create validation rules via the object in question, as shown in the screenshot below:
+
+![Validation Rule Menu Option](https://lh5.googleusercontent.com/-axIv59aJau8/VGtAS6-PaeI/AAAAAAAAA_Q/XmkuqWeSck0/w228-h305-no/Screen%2BShot%2B2014-11-18%2Bat%2B12.32.43.png)
+
 You can read more about validation rules at: https://help.salesforce.com/HTViewHelpDoc?id=fields_about_field_validation.htm
 
 ###Configuration Exercise 2: Improve the Validation Rule###
@@ -50,6 +54,14 @@ The Sales manager would like to be notified when a high value (with an amount ov
 Create a workflow rule that sends an email alert when a high value opportunity is created.  Note: the email alert should only be sent once, when the record is first inserted.
 
 Hint: You will need to create an additional user to represent the Sales Manager.
+
+Hint: Access the workflow functionality from the setup menu as follows:
+
+![Workflow Menu Option] (https://lh3.googleusercontent.com/vav77vUsJawQnrAzqjSCh5mZYKogKHnUciWEoBE1GJI=w194-h207-p-no)
+
+Hint: You will also need to create an email template for use by the workflow action, via the following setup menu option:
+
+![Email Template Option](https://lh6.googleusercontent.com/-OaIORTPz3Hg/VGtBdPkLYCI/AAAAAAAABAA/kcM1L7nAwXY/w217-h231-no/Screen%2BShot%2B2014-11-18%2Bat%2B12.53.31.png)
 
 ###Exercise Set 2: Apex###
 
