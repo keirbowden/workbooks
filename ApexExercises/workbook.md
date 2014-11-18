@@ -33,7 +33,7 @@ The Sales Manager for a large enterprise has found that the marketing team are c
 
 A validation rule is required that ensures at least one of these fields is populated, and blocks the save with an appropriate error message if this is not the case.
 
-You can read more about validation rules at: https://help.salesforce.com/HTViewHelpDoc?id=fields\_about\_field_validation.htm
+You can read more about validation rules at: https://help.salesforce.com/HTViewHelpDoc?id=fields_about_field_validation.htm
 
 ###Configuration Exercise 2: Improve the Validation Rule###
 
@@ -125,7 +125,7 @@ Other workbooks are available - https://developer.salesforce.com/docs?filter_tex
 
 Trailhead (https://developer.salesforce.com/trailhead) is an interactive learning system for Salesforce developers, provided by Salesforce. At the time of writing (November 2014) the following trails are available :
 
-* https://developer.salesforce.com/en/trailhead/trail/force\_com\_introduction - Trailhead module for customising without code
+* https://developer.salesforce.com/en/trailhead/trail/force_com_introduction - Trailhead module for customising without code
 * https://developer.salesforce.com/en/trailhead/trail/force_com_declarative_beginner - Trailhead module for developing visual applications without code
 * https://developer.salesforce.com/en/trailhead/trail/force_com_programmatic_beginner - Trailhead module for programming on the Salesforce1 platform
 
