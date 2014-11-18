@@ -5,9 +5,7 @@ Introduction to Force.com/Apex Workshop Exercises - Answers
 
 ###Configuration Exercise 1: Create a Validation Rule###
   
-<img border="1" src="https://lh3.googleusercontent.com/-qmop3FyDdhs/VGtbPmoKEEI/AAAAAAAABAs/lzC9YbGLmHI/w576-h628-no/Screen%2BShot%2B2014-11-18%2Bat%2B14.43.21.png"/>
-  
-
+![Validation Rule](https://lh3.googleusercontent.com/-qmop3FyDdhs/VGtbPmoKEEI/AAAAAAAABAs/lzC9YbGLmHI/w576-h628-no/Screen%2BShot%2B2014-11-18%2Bat%2B14.43.21.png)
   
 ###Configuration Exercise 2: Improve the Validation Rule###
   
@@ -19,9 +17,13 @@ Introduction to Force.com/Apex Workshop Exercises - Answers
 
 ![Email Template](https://lh5.googleusercontent.com/-GRk-qMTb1yQ/VGthaaZbhUI/AAAAAAAABBs/AV9FPWkeruQ/w689-h478-no/Screen%2BShot%2B2014-11-18%2Bat%2B15.09.02.png)
 
+***
+
 ####Email Alert####
 
 ![Email Alert Action](https://lh5.googleusercontent.com/-UIWsyWlVu2M/VGtheRY1aEI/AAAAAAAABCA/grsJE7q9_ac/w698-h229-no/Screen%2BShot%2B2014-11-18%2Bat%2B15.09.37.png)
+
+***
 
 ####Workflow Rule####
 
