@@ -4,12 +4,14 @@ Introduction to Force.com/Apex Workshop Exercises - Answers
 ## Exercise Set 1: Automating Business Processes through Configuration ##
 
 ###Configuration Exercise 1: Create a Validation Rule###
+  
+<img border="1" src="https://lh3.googleusercontent.com/-qmop3FyDdhs/VGtbPmoKEEI/AAAAAAAABAs/lzC9YbGLmHI/w576-h628-no/Screen%2BShot%2B2014-11-18%2Bat%2B14.43.21.png"/>
+  
 
-![Validation Rule](https://lh3.googleusercontent.com/-qmop3FyDdhs/VGtbPmoKEEI/AAAAAAAABAs/lzC9YbGLmHI/w576-h628-no/Screen%2BShot%2B2014-11-18%2Bat%2B14.43.21.png)
-
+  
 ###Configuration Exercise 2: Improve the Validation Rule###
-
-![Improved Validation Rule]https://lh3.googleusercontent.com/-vEBVOvdMW80/VGtdvHaNTDI/AAAAAAAABBc/7F4TEmwfAuk/w577-h628-no/Screen%2BShot%2B2014-11-18%2Bat%2B14.54.05.png
+  
+![Improved Validation Rule](https://lh3.googleusercontent.com/-vEBVOvdMW80/VGtdvHaNTDI/AAAAAAAABBc/7F4TEmwfAuk/w577-h628-no/Screen%2BShot%2B2014-11-18%2Bat%2B14.54.05.png)
 
 ###Configuration Exercise 3: Create an Automated Email Alert###
 
