@@ -84,18 +84,18 @@ Hint: To author an Apex trigger, access the Triggers option from the submenu of 
 Hint: Here's an example of a simple trigger to remind you of the syntax:
 
   ```
-  trigger bg_account_bu on Account (before update) 
-  {
-	  for (Account acc : trigger.new)
-	  {
-  		double version=1;
-	  	if (null!=acc.Version__c)
-		  {
-  			version=acc.Version__c+1;
-	  	}
-		  acc.Version__c=version;
-	  }
-  }
+    trigger bg_account_bu on Account (before update) 
+    {
+        for (Account acc : trigger.new)
+        {
+            double version=1;
+            if (null!=acc.Version__c)
+            {
+                version=acc.Version__c+1;
+            }
+             acc.Version__c=version;
+        }
+    }
   ```
 
 ###Apex Exercise 2: Unit Test###
@@ -131,11 +131,11 @@ Hint: To access fields from a parent object use the dot notation to follow the r
 
 Hint: Here's an exceptionally simply Visualforce page to demonstrate accessing fields through a standard controller:
 
-```
-  <apex:page StandardController=“Account”>  
-    You are viewing <apex:outputField value=“{!Account.Name}” />
-  </apex:page>
-```
+  ```
+    <apex:page StandardController=“Account”>  
+        You are viewing <apex:outputField value=“{!Account.Name}” />
+    </apex:page>
+  ```
 
 ###Apex Exercise 2: Extension Controller###
 
@@ -153,30 +153,30 @@ Hint: Testing a Visualforce controller does not involve any interaction with the
 
 Hint: Here's an example unit test for a custom controller to give you a feel for the structure of a test class
   ```
-@isTest
-private class WrapperExampleController_Test {
+    @isTest
+    private class WrapperExampleController_Test {
 
-    private static testMethod void testController()
-    {
-    	// create a test account
-    	Account acc1=new Account(Name='Unit Test 1', 
-    	                         BillingStreet='Unit Test Street',
-    	                         BillingCity='Unit Testville',
-    	                         BillingPostalCode='UTEST1 1UT');
-    	insert acc1;
+        private static testMethod void testController()
+        {
+    	    // create a test account
+    	    Account acc1=new Account(Name='Unit Test 1', 
+    	                             BillingStreet='Unit Test Street',
+    	                             BillingCity='Unit Testville',
+    	                             BillingPostalCode='UTEST1 1UT');
+    	    insert acc1;
     	
-    	// instantiate the controller
-    	WrapperExampleController ctrl=new WrapperExampleController();
+    	    // instantiate the controller
+    	    WrapperExampleController ctrl=new WrapperExampleController();
     	
-    	// check that there is at least one account
-    	Integer accSize=ctrl.getAccounts().size();
-    	System.assert(accSize>=1);
+    	    // check that there is at least one account
+    	    Integer accSize=ctrl.getAccounts().size();
+    	    System.assert(accSize>=1);
     	
-    	// the number of rows should be 4 - one for each field
-    	List<WrapperExampleController.RowWrapper> rows=ctrl.getRowWrappers();
-    	System.assertEquals(4, rows.size());
+    	    // the number of rows should be 4 - one for each field
+    	    List<WrapperExampleController.RowWrapper> rows=ctrl.getRowWrappers();
+    	    System.assertEquals(4, rows.size());
+        }
     }
-}
 
   ```
 
