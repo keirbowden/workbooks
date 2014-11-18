@@ -191,20 +191,28 @@ The Salesforce workbooks guide you through key functionality through a series of
 
 * Force.com Workbook -  
   https://developer.salesforce.com/docs/atlas.en-us.workbook.meta/workbook/
-* Apex Workbook - https://developer.salesforce.com/docs/atlas.en-us.apex_workbook.meta/apex_workbook/
-* Visualforce Workbook - https://developer.salesforce.com/docs/atlas.en-us.workbook_vf.meta/workbook_vf/
+* Apex Workbook -   
+  https://developer.salesforce.com/docs/atlas.en-us.apex_workbook.meta/apex_workbook/
+* Visualforce Workbook -  
+  https://developer.salesforce.com/docs/atlas.en-us.workbook_vf.meta/workbook_vf/
 
-Other workbooks are available - https://developer.salesforce.com/docs?filter_text=workbook&service=All+Services&select_type=&version=32.0&lang=en-us&sort=title
+Other workbooks are available -   
+https://developer.salesforce.com/docs?filter_text=workbook&service=All+Services&select_type=&version=32.0&lang=en-us&sort=title
 
 ###Trailhead###
 
 Trailhead (https://developer.salesforce.com/trailhead) is an interactive learning system for Salesforce developers, provided by Salesforce. At the time of writing (November 2014) the following trails are available :
 
-* Getting started with Force.com - https://developer.salesforce.com/en/trailhead/trail/force_com_introduction
-* Intro to Visual App Development (no code!) - https://developer.salesforce.com/en/trailhead/trail/force_com_declarative_beginner
-* Intro to Programmatic App Development - https://developer.salesforce.com/en/trailhead/trail/force_com_programmatic_beginner
+* Getting started with Force.com -   
+  https://developer.salesforce.com/en/trailhead/trail/force_com_introduction
+* Intro to Visual App Development (no code!) -  
+  https://developer.salesforce.com/en/trailhead/trail/force_com_declarative_beginner
+* Intro to Programmatic App Development -  
+  https://developer.salesforce.com/en/trailhead/trail/force_com_programmatic_beginner
 
 ###Developer Guides###
 
-* Force.com Apex Code Developers Guide - https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/
-* Visualforce Developer's Guide - https://developer.salesforce.com/docs/atlas.en-us.pages.meta/pages/
+* Force.com Apex Code Developers Guide -   
+https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/
+* Visualforce Developer's Guide -   
+https://developer.salesforce.com/docs/atlas.en-us.pages.meta/pages/
