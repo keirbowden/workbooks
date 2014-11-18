@@ -78,7 +78,13 @@ Write a unit test for the trigger that covers at least the following scenarios:
 5. A private contact (not associated with an account) is deleted
 6. A private contact (not associated with an account) is updated to associate it with an account
 
-###Apex Exercise 3: Unit Test###
+###Apex Exercise 3: Bulk Triggers###
+
+Triggers need to be able to process up to 200 records at a time without breaching governor limits. 
+
+Rework the trigger created in exercise 1 to be able to process actions on multiple contact records.
+
+Hint: The trigger will need to build a list of affected accounts and then retrieve the related contacts for all of these accounts through a single SOQL query.
 
 ###Summary###
 In this workbook you have used a couple of the features of the Bootstrap responsive web design framework - panels and the responsive grid. Bootstrap provides much more than this, including a rich set of reusable components and more than a dozen JQuery plugins to bring those components to life. As you may have noticed, when using Bootstrap in a Visualforce page, very few of the Visualforce standard components are used, and none of those components that provide layout or styling.
