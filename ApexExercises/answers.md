@@ -47,4 +47,4 @@ Introduction to Force.com/Apex Workshop Exercises - Answers
           acc.Contact_Count__c=acc.contacts.size();
           update acc;
       }
-  }
+    }
