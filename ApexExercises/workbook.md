@@ -33,7 +33,7 @@ The Sales Manager for a large enterprise has found that the marketing team are c
 
 A validation rule is required that ensures at least one of these fields is populated, and blocks the save with an appropriate error message if this is not the case.
 
-You can read more about validation rules at: [https://help.salesforce.com/HTViewHelpDoc?id=fields_about_field_validation.htm]
+You can read more about validation rules at: https://help.salesforce.com/HTViewHelpDoc?id=fields\_about\_field_validation.htm
 
 ###Configuration Exercise 2: Improve the Validation Rule###
 
@@ -115,21 +115,21 @@ In this workbook you have carried out simple business process automation through
 
 The Salesforce workbooks guide you through key functionality through a series of tutorials.
 
-* Force.com Workbook - `https://developer.salesforce.com/docs/atlas.en-us.workbook.meta/workbook/`
-* Apex Workbook - `https://developer.salesforce.com/docs/atlas.en-us.apex_workbook.meta/apex_workbook/`
-* Visualforce Workbook - `https://developer.salesforce.com/docs/atlas.en-us.workbook_vf.meta/workbook_vf/`
+* Force.com Workbook - https://developer.salesforce.com/docs/atlas.en-us.workbook.meta/workbook/
+* Apex Workbook - https://developer.salesforce.com/docs/atlas.en-us.apex_workbook.meta/apex_workbook/
+* Visualforce Workbook - https://developer.salesforce.com/docs/atlas.en-us.workbook_vf.meta/workbook_vf/
 
-Other workbooks are available - `https://developer.salesforce.com/docs?filter_text=workbook&service=All+Services&select_type=&version=32.0&lang=en-us&sort=title`
+Other workbooks are available - https://developer.salesforce.com/docs?filter_text=workbook&service=All+Services&select_type=&version=32.0&lang=en-us&sort=title
 
 ###Trailhead###
 
-Trailhead (`https://developer.salesforce.com/trailhead`) is an interactive learning system for Salesforce developers, provided by Salesforce. At the time of writing (November 2014) the following trails are available :
+Trailhead (https://developer.salesforce.com/trailhead) is an interactive learning system for Salesforce developers, provided by Salesforce. At the time of writing (November 2014) the following trails are available :
 
-* `https://developer.salesforce.com/en/trailhead/trail/force_com_introduction` - Trailhead module for customising without code
-* `https://developer.salesforce.com/en/trailhead/trail/force_com_declarative_beginner` - Trailhead module for developing visual applications without code
-* `https://developer.salesforce.com/en/trailhead/trail/force_com_programmatic_beginner` - Trailhead module for programming on the Salesforce1 platform
+* https://developer.salesforce.com/en/trailhead/trail/force\_com\_introduction - Trailhead module for customising without code
+* https://developer.salesforce.com/en/trailhead/trail/force_com_declarative_beginner - Trailhead module for developing visual applications without code
+* https://developer.salesforce.com/en/trailhead/trail/force_com_programmatic_beginner - Trailhead module for programming on the Salesforce1 platform
 
 ###Developer Guides###
 
-* Force.com Apex Code Developers Guide - `https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/`
-* Visualforce Developer's Guide - `https://developer.salesforce.com/docs/atlas.en-us.pages.meta/pages/`
+* Force.com Apex Code Developers Guide - https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/
+* Visualforce Developer's Guide - https://developer.salesforce.com/docs/atlas.en-us.pages.meta/pages/
