@@ -179,3 +179,31 @@ Introduction to Force.com/Apex Workshop Exercises - Answers
       </apex:form>
     </apex:page>
     
+###Visualforce Exercise 3: Unit Test###
+
+    @isTest
+    private class AccountContactEditExt_Test
+    {
+        private static testMethod void TestController()
+        {
+            Account acc=new Account(Name='Unit Test');
+            insert acc;
+        
+            Contact cont=new Contact(FirstName='Unit',
+                                     LastName='Test',
+                                     Email='keir.bowden@googlemail.com',
+                                     AccountId=acc.id);
+            insert cont;
+        
+            AccountContactEditExt ctrl=
+                        new AccountContactEditExt(
+                               new ApexPages.StandardController(cont));
+            
+            ctrl.acc.Industry='Apparel';
+            System.assertNotEquals(null, ctrl.save());
+        
+            Account accFromDB=[select id, Industry from Account where id=:acc.Id];
+        
+            System.assertEquals(accFromDB.Industry, 'Apparel');
+        }
+    }
