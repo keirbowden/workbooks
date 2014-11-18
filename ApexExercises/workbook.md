@@ -189,7 +189,7 @@ In this workbook you have carried out simple business process automation through
 
 The Salesforce workbooks guide you through key functionality through a series of tutorials.
 
-* Force.com Workbook - 
+* Force.com Workbook -  
   https://developer.salesforce.com/docs/atlas.en-us.workbook.meta/workbook/
 * Apex Workbook - https://developer.salesforce.com/docs/atlas.en-us.apex_workbook.meta/apex_workbook/
 * Visualforce Workbook - https://developer.salesforce.com/docs/atlas.en-us.workbook_vf.meta/workbook_vf/
