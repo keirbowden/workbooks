@@ -55,7 +55,7 @@ Create a workflow rule that sends an email alert when a high value opportunity i
 
 **Note**: the email alert should only be sent once, when the record is first inserted.
 
-*Hint*: You will need to create an additional user to represent the Sales Manager.
+*Hint*: You can either send the email to yourself, or create an additional user to represent the Sales Manager.
 
 *Hint*: Access the workflow functionality from the setup menu as follows:
 
@@ -73,13 +73,20 @@ Create a workflow rule that sends an email alert when a high value opportunity i
 
 Users would like to see in the account list view how many contacts are associated with an account. Salesforce supports two distinct types of contacts - public (which are associated with an account) and private (which are not associated with an account and are only visible to the record owner and the system administrator).  
 
-Create an Apex trigger that reacts to actions on the contact sobject and updates the count of contacts on the account.
+Create an Apex trigger that reacts to actions on the contact sobject and updates the count of contacts on the account. 
+
+For the purposes of this exercise:
+
+* The trigger should be coded to work with a single record.
+* The count will only be updated when a contact is inserted.
 
 **Note**: Private contacts (not associated with an account) should be unaffected by this trigger.
 
+**Note**: You will need to add a field named 'Contact Count' to the account sobject.
+
 *Hint*: A contact is associated with an account if the AccountId field is populated.
 
-*Hint*: The number of contacts will change when a contact is added, deleted, updated to be associated with a different account or undeleted from the recycle bin.
+
 
 *Hint*: To author an Apex trigger, access the Triggers option from the submenu of the sobject in question:
 
@@ -89,15 +96,13 @@ Create an Apex trigger that reacts to actions on the contact sobject and updates
 
     trigger bg_account_bu on Account (before update) 
     {
-        for (Account acc : trigger.new)
+        Account acc : trigger.new[0];
+        double version=1;
+        if (null!=acc.Version__c)
         {
-            double version=1;
-            if (null!=acc.Version__c)
-            {
-                version=acc.Version__c+1;
-            }
-             acc.Version__c=version;
+            version=acc.Version__c+1;
         }
+         acc.Version__c=version;
     }
 
 ###Apex Exercise 2: Unit Test###
@@ -107,13 +112,13 @@ In order to promote the trigger to production, at least 75% code coverage is req
 Write a unit test for the trigger that covers at least the following scenarios:
 
 1. A contact associated with an account is created
-2. A contact associated with an account is updated to be associated with a different account
-3. A contact associated with an account is deleted
-4. A private contact (not associated to an account) is created
-5. A private contact (not associated with an account) is deleted
-6. A private contact (not associated with an account) is updated to associate it with an account
+2. A private contact (not associated to an account) is created
 
-*Hint*: In order to test the database actions, you will need to insert/update/delete the records in question.
+*Hint*: In order to test the database actions, you will need to insert the records in question.
+
+*Hint*: When you insert a record into the database, the id field is automatically populated on your local copy of the record.
+
+*Hint*: FirstName and LastName are required fields for a contact.  If you have completed the configuration exercises, remember to add one of the Phone or Email fields when creating a contact associated with an account.
 
 ###Apex Exercise 3: Bulk Triggers###
 
@@ -125,7 +130,7 @@ Rework the trigger created in exercise 1 to be able to process actions on multip
 
 ###Exercise Set 3: Visualforce###
 
-###Apex Exercise 1: Standard Controller###
+###Visualforce Exercise 1: Standard Controller###
 
 Create a single Visualforce page to display the details of a contact and selected (you choose!) fields from the parent account. You can layout this information using simple HTML elements such as tables.
 
@@ -139,7 +144,7 @@ Create a single Visualforce page to display the details of a contact and selecte
     </apex:page>
   
 
-###Apex Exercise 2: Extension Controller###
+###Visualforce Exercise 2: Extension Controller###
 
 Create a single Visualforce page to edit a contact and selected fields from the parent account.  As this needs to save changes to multiple records, an extension controller is required to manage the additional record.
 
@@ -148,7 +153,7 @@ http://www.salesforce.com/us/developer/docs/pages/Content/pages_controller_exten
 
 *Hint*: An extension controller should always delegate to the standard controller wherever possible, so the extension controller should only manage one of these records.
 
-###Apex Exercise 3: Unit Test###
+###Visualforce Exercise 3: Unit Test###
 
 Create a unit test for the extension controller created in exercise 2.
 
