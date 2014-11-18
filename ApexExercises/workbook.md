@@ -86,6 +86,28 @@ Rework the trigger created in exercise 1 to be able to process actions on multip
 
 Hint: The trigger will need to build a list of affected accounts and then retrieve the related contacts for all of these accounts through a single SOQL query.
 
+###Exercise Set 3: Visualforce###
+
+###Apex Exercise 1: Standard Controller###
+
+Create a single Visualforce page to display the details of a contact and selected (you choose!) fields from the parent account
+
+Hint: To access fields from a parent object use the dot notation to follow the relationship (e.g. Contact.Account.Name)
+
+###Apex Exercise 2: Extension Controller###
+
+Create a single Visualforce page to edit a contact and selected fields from the parent account.  As this needs to save changes to multiple records, an extension controller is required to manage the additional record.
+
+Hint: An extension controller should always delegate to the standard controller wherever possible, so the extension controller should only manage one of these records.
+
+###Apex Exercise 3: Unit Test###
+
+Create a unit test for the extension controller created in exercise 2.
+
+Hint: Testing a Visualforce controller does not involve any interaction with the page, instead you would set up the internal state of the controller to reflect the user actions you are simulating and then execute methods to verify behaviour.
+
+Hint: To instantiate an extension controller, you need to pass it an instance of the standard controller, wrapping the standard object. E.g. <code>MyController ctrl=new MyController(new ApexPages.StandardController(new Contact()));</code>
+
 ###Summary###
 In this workbook you have used a couple of the features of the Bootstrap responsive web design framework - panels and the responsive grid. Bootstrap provides much more than this, including a rich set of reusable components and more than a dozen JQuery plugins to bring those components to life. As you may have noticed, when using Bootstrap in a Visualforce page, very few of the Visualforce standard components are used, and none of those components that provide layout or styling.
 
