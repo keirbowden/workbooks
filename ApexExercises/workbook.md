@@ -57,11 +57,11 @@ Hint: You will need to create an additional user to represent the Sales Manager.
 
 Hint: Access the workflow functionality from the setup menu as follows:
 
-![Workflow Menu Option] (https://lh3.googleusercontent.com/vav77vUsJawQnrAzqjSCh5mZYKogKHnUciWEoBE1GJI=w194-h207-p-no)
+![Workflow Menu Option] (https://lh6.googleusercontent.com/1KWSLC8lJfAZeWjTwh4V6EaJ86WZPjACf8VxhpGjlt8=w160-h207-p-no)
 
 Hint: You will also need to create an email template for use by the workflow action, via the following setup menu option:
 
-![Email Template Option](https://lh6.googleusercontent.com/-OaIORTPz3Hg/VGtBdPkLYCI/AAAAAAAABAA/kcM1L7nAwXY/w217-h231-no/Screen%2BShot%2B2014-11-18%2Bat%2B12.53.31.png)
+![Email Template Option](https://lh3.googleusercontent.com/vav77vUsJawQnrAzqjSCh5mZYKogKHnUciWEoBE1GJI=w194-h207-p-no)
 
 ###Exercise Set 2: Apex###
 
