@@ -48,3 +48,32 @@ Introduction to Force.com/Apex Workshop Exercises - Answers
           update acc;
       }
     }
+
+###Apex Exercise 2: Unit Test###
+
+    @isTest
+    private class TestContactTrigger
+    {
+        private static testMethod void TestAddPublic()
+        {
+            Account acc=new Account(Name='Unit Test');
+            insert acc;
+        
+            Contact cont=new Contact(AccountId=acc.Id,
+                                     FirstName='Keir',
+                                     LastName='Bowden',
+                                     Email='keirbowden@brightgen.com');
+            insert cont;
+        
+            Account accFromDB=[select id, Contact_Count__c from Account where id=:acc.Id];
+            System.assertEquals(accFromDB.Contact_Count__c, 1);
+        }
+
+        private static testMethod void TestAddPrivate()
+        {
+            Contact cont=new Contact(FirstName='Keir',
+                                     LastName='Bowden');
+            insert cont;
+        }
+    }
+    
