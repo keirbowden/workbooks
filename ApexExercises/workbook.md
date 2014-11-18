@@ -125,9 +125,9 @@ Other workbooks are available - https://developer.salesforce.com/docs?filter_tex
 
 Trailhead (https://developer.salesforce.com/trailhead) is an interactive learning system for Salesforce developers, provided by Salesforce. At the time of writing (November 2014) the following trails are available :
 
-* https://developer.salesforce.com/en/trailhead/trail/force_com_introduction - Trailhead module for customising without code
-* https://developer.salesforce.com/en/trailhead/trail/force_com_declarative_beginner - Trailhead module for developing visual applications without code
-* https://developer.salesforce.com/en/trailhead/trail/force_com_programmatic_beginner - Trailhead module for programming on the Salesforce1 platform
+* Getting started with Force.com - https://developer.salesforce.com/en/trailhead/trail/force_com_introduction
+* Intro to Visual App Development (no code!) - https://developer.salesforce.com/en/trailhead/trail/force_com_declarative_beginner
+* Intro to Programmatic App Development - https://developer.salesforce.com/en/trailhead/trail/force_com_programmatic_beginner
 
 ###Developer Guides###
 
