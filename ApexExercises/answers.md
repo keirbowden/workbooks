@@ -102,3 +102,80 @@ Introduction to Force.com/Apex Workshop Exercises - Answers
     
         update accs;
     }
+
+###Exercise Set 3: Visualforce###
+
+###Apex Exercise 1: Standard Controller###
+
+    <apex:page standardcontroller="Contact">
+      <h1>Contact : <apex:outputField value="{!Contact.Name}"/></h1>
+      <table style="width:50%">
+        <tr>
+          <td>Email:</td>
+          <td><apex:outputField value="{!Contact.Email}"/></td>
+          <td>Phone:</td>
+          <td><apex:outputField value="{!Contact.Phone}"/></td>
+        </tr>
+        <tr colspan="4">
+          <td><strong>Account Fields</strong></td>
+        </tr>
+        <tr>
+          <td>Name:</td>
+          <td><apex:outputField value="{!Contact.Account.Name}"/></td>
+          <td>Industry:</td>
+          <td><apex:outputField value="{!Contact.Account.Industry}"/></td>
+        </tr>
+      </table>
+    </apex:page>
+    
+###Apex Exercise 2: Extension Controller###
+
+####Controller####
+
+    public class AccountContactEditExt
+    {
+        private ApexPages.StandardController std;
+        public Account acc {get; set;}
+    
+        public AccountContactEditExt(ApexPages.StandardController stdCtrl)
+        {
+            std=stdCtrl;
+            Contact cont=(Contact) stdCtrl.getRecord();
+            acc=[select id, Name, Industry from Account where id=:cont.AccountId];
+        }
+    
+        public PageReference save()
+        {
+            upsert acc;
+            return std.save();
+        }
+    }
+
+####Visualforce Page####
+  
+    <apex:page standardcontroller="Contact" extensions="AccountContactEditExt">
+      <apex:outputField value="{!Contact.AccountId}" rendered="false"/>
+      <apex:form >
+          <h1>Contact : <apex:inputField value="{!Contact.Name}"/></h1>
+          <table style="width:50%">
+            <tr>
+              <td>Email:</td>
+              <td><apex:inputField value="{!Contact.Email}"/></td>
+              <td>Phone:</td>
+              <td><apex:inputField value="{!Contact.Phone}"/></td>
+            </tr>
+            <tr colspan="4">
+              <td><strong>Account Fields</strong></td>
+            </tr>
+            <tr>
+              <td>Name:</td>
+              <td><apex:inputField value="{!acc.Name}"/></td>
+              <td>Industry:</td>
+              <td><apex:inputField value="{!acc.Industry}"/></td>
+            </tr>
+          </table>
+          <apex:commandButton action="{!save}" value="Save"/>&nbsp;
+          <apex:commandButton action="{!cancel}" value="Cancel"/>
+      </apex:form>
+    </apex:page>
+    
