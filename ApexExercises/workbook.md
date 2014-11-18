@@ -33,7 +33,7 @@ The Sales Manager for a large enterprise has found that the marketing team are c
 
 A validation rule is required that ensures at least one of these fields is populated, and blocks the save with an appropriate error message if this is not the case.
 
-You can read more about validation rules at: `https://help.salesforce.com/HTViewHelpDoc?id=fields_about_field_validation.htm`
+You can read more about validation rules at: [https://help.salesforce.com/HTViewHelpDoc?id=fields_about_field_validation.htm]
 
 ###Configuration Exercise 2: Improve the Validation Rule###
 
