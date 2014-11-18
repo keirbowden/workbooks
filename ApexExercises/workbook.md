@@ -33,7 +33,7 @@ The Sales Manager for a large enterprise has found that the marketing team are c
 
 A validation rule is required that ensures at least one of these fields is populated, and blocks the save with an appropriate error message if this is not the case.
 
-Hint: You create validation rules via the object in question, as shown in the screenshot below:
+*Hint*: You create validation rules via the object in question, as shown in the screenshot below:
 
 ![Validation Rule Menu Option](https://lh5.googleusercontent.com/-axIv59aJau8/VGtAS6-PaeI/AAAAAAAAA_Q/XmkuqWeSck0/w228-h305-no/Screen%2BShot%2B2014-11-18%2Bat%2B12.32.43.png)
 
@@ -45,7 +45,7 @@ Salesforce supports two distinct types of contacts - public (which are associate
 
 Rework the validation rule from Configuration Exercise 1 to allow private contacts to be saved without either of these fields, but that still blocks the save of a public contact unless at least one is present. 
 
-Hint: A contact is associated with an account if the AccountId field is populated.
+*Hint*: A contact is associated with an account if the AccountId field is populated.
 
 ###Configuration Exercise 3: Create an Automated Email Alert###
 
@@ -53,15 +53,17 @@ The Sales manager would like to be notified when a high value (with an amount ov
 
 Create a workflow rule that sends an email alert when a high value opportunity is created.  Note: the email alert should only be sent once, when the record is first inserted.
 
-Hint: You will need to create an additional user to represent the Sales Manager.
+*Hint*: You will need to create an additional user to represent the Sales Manager.
 
-Hint: Access the workflow functionality from the setup menu as follows:
+*Hint*: Access the workflow functionality from the setup menu as follows:
 
 ![Workflow Menu Option] (https://lh6.googleusercontent.com/1KWSLC8lJfAZeWjTwh4V6EaJ86WZPjACf8VxhpGjlt8=w160-h207-p-no)
 
-Hint: You will also need to create an email template for use by the workflow action, via the following setup menu option:
+*Hint*: You will also need to create an email template for use by the workflow action, via the following setup menu option:
 
 ![Email Template Option](https://lh3.googleusercontent.com/vav77vUsJawQnrAzqjSCh5mZYKogKHnUciWEoBE1GJI=w194-h207-p-no)
+
+*Hint*: Workflows aren't automatically activated when created - make sure you click the button to activate after you save the workflow rule.
 
 ###Exercise Set 2: Apex###
 
@@ -71,17 +73,17 @@ Users would like to see in the account list view how many contacts are associate
 
 Create an Apex trigger that reacts to actions on the contact sobject and updates the count of contacts on the account.
 
-Note: Private contacts (not associated with an account) should be unaffected by this trigger.
+*Note*: Private contacts (not associated with an account) should be unaffected by this trigger.
 
-Hint: A contact is associated with an account if the AccountId field is populated.
+*Hint*: A contact is associated with an account if the AccountId field is populated.
 
-Hint: The number of contacts will change when a contact is added, deleted, updated to be associated with a different account or undeleted from the recycle bin.
+*Hint*: The number of contacts will change when a contact is added, deleted, updated to be associated with a different account or undeleted from the recycle bin.
 
-Hint: To author an Apex trigger, access the Triggers option from the submenu of the sobject in question:
+*Hint*: To author an Apex trigger, access the Triggers option from the submenu of the sobject in question:
 
 ![Apex Trigger Menu](https://lh4.googleusercontent.com/oQkq6ZRJImCZYg4WBN83996fowsn56nvXux5IKBv4FM=w150-h207-p-no)
 
-Hint: Here's an example of a simple trigger to remind you of the syntax:
+*Hint*: Here's an example of a simple trigger to remind you of the syntax:
 
     trigger bg_account_bu on Account (before update) 
     {
@@ -109,7 +111,7 @@ Write a unit test for the trigger that covers at least the following scenarios:
 5. A private contact (not associated with an account) is deleted
 6. A private contact (not associated with an account) is updated to associate it with an account
 
-Hint: In order to test the database actions, you will need to insert/update/delete the records in question.
+*Hint*: In order to test the database actions, you will need to insert/update/delete the records in question.
 
 ###Apex Exercise 3: Bulk Triggers###
 
@@ -117,7 +119,7 @@ Triggers need to be able to process up to 200 records at a time without breachin
 
 Rework the trigger created in exercise 1 to be able to process actions on multiple contact records.
 
-Hint: The trigger will need to build a list of affected accounts and then retrieve the related contacts for all of these accounts through a single SOQL query.
+*Hint*: The trigger will need to build a list of affected accounts and then retrieve the related contacts for all of these accounts through a single SOQL query.
 
 ###Exercise Set 3: Visualforce###
 
@@ -125,9 +127,9 @@ Hint: The trigger will need to build a list of affected accounts and then retrie
 
 Create a single Visualforce page to display the details of a contact and selected (you choose!) fields from the parent account. You can layout this information using simple HTML elements such as tables.
 
-Hint: To access fields from a parent object use the dot notation to follow the relationship (e.g. Contact.Account.Name)
+*Hint*: To access fields from a parent object use the dot notation to follow the relationship (e.g. Contact.Account.Name)
 
-Hint: Here's an exceptionally simply Visualforce page to demonstrate accessing fields through a standard controller:
+*Hint*: Here's an exceptionally simply Visualforce page to demonstrate accessing fields through a standard controller:
 
   
     <apex:page StandardController=“Account”>  
@@ -142,15 +144,15 @@ Create a single Visualforce page to edit a contact and selected fields from the 
 There is an introduction to extension controllers at :   
 http://www.salesforce.com/us/developer/docs/pages/Content/pages_controller_extension.htm
 
-Hint: An extension controller should always delegate to the standard controller wherever possible, so the extension controller should only manage one of these records.
+*Hint*: An extension controller should always delegate to the standard controller wherever possible, so the extension controller should only manage one of these records.
 
 ###Apex Exercise 3: Unit Test###
 
 Create a unit test for the extension controller created in exercise 2.
 
-Hint: Testing a Visualforce controller does not involve any interaction with the page, instead you would set up the internal state of the controller to reflect the user actions you are simulating and then execute methods to verify behaviour.
+*Hint*: Testing a Visualforce controller does not involve any interaction with the page, instead you would set up the internal state of the controller to reflect the user actions you are simulating and then execute methods to verify behaviour.
 
-Hint: Here's an example unit test for a custom controller to give you a feel for the structure of a test class
+*Hint*: Here's an example unit test for a custom controller to give you a feel for the structure of a test class
   
     @isTest
     private class WrapperExampleController_Test {
@@ -179,7 +181,7 @@ Hint: Here's an example unit test for a custom controller to give you a feel for
 
   
 
-Hint: To instantiate an extension controller, you need to pass it an instance of the standard controller, wrapping the standard object. E.g. <code>MyController ctrl=new MyController(new ApexPages.StandardController(new Contact()));</code>
+*Hint*: To instantiate an extension controller, you need to pass it an instance of the standard controller, wrapping the standard object. E.g. <code>MyController ctrl=new MyController(new ApexPages.StandardController(new Contact()));</code>
 
 ##Tell me more##
 In this workbook you have carried out simple business process automation through configuration and created Apex triggers and Visualforce pages.  This has only scratched the surface of development with the Salesforce1 platform - here are some resources to help you gain a deeper understanding and start building up your skills as a Salesforce developer:
