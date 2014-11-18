@@ -51,7 +51,9 @@ Rework the validation rule from Configuration Exercise 1 to allow private contac
 
 The Sales manager would like to be notified when a high value (with an amount over 1 million) opportunity is created in the system.
 
-Create a workflow rule that sends an email alert when a high value opportunity is created.  Note: the email alert should only be sent once, when the record is first inserted.
+Create a workflow rule that sends an email alert when a high value opportunity is created.  
+
+**Note**: the email alert should only be sent once, when the record is first inserted.
 
 *Hint*: You will need to create an additional user to represent the Sales Manager.
 
@@ -69,11 +71,11 @@ Create a workflow rule that sends an email alert when a high value opportunity i
 
 ###Apex Exercise 1: Create an Apex Trigger###
 
-Users would like to see in the account list view how many contacts are associated with an account. 
+Users would like to see in the account list view how many contacts are associated with an account. Salesforce supports two distinct types of contacts - public (which are associated with an account) and private (which are not associated with an account and are only visible to the record owner and the system administrator).  
 
 Create an Apex trigger that reacts to actions on the contact sobject and updates the count of contacts on the account.
 
-*Note*: Private contacts (not associated with an account) should be unaffected by this trigger.
+**Note**: Private contacts (not associated with an account) should be unaffected by this trigger.
 
 *Hint*: A contact is associated with an account if the AccountId field is populated.
 
