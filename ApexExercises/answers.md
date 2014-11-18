@@ -105,7 +105,7 @@ Introduction to Force.com/Apex Workshop Exercises - Answers
 
 ###Exercise Set 3: Visualforce###
 
-###Apex Exercise 1: Standard Controller###
+###Visualforce Exercise 1: Standard Controller###
 
     <apex:page standardcontroller="Contact">
       <h1>Contact : <apex:outputField value="{!Contact.Name}"/></h1>
@@ -128,7 +128,7 @@ Introduction to Force.com/Apex Workshop Exercises - Answers
       </table>
     </apex:page>
     
-###Apex Exercise 2: Extension Controller###
+###Visualforce Exercise 2: Extension Controller###
 
 ####Controller####
 
