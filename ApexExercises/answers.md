@@ -77,3 +77,28 @@ Introduction to Force.com/Apex Workshop Exercises - Answers
         }
     }
     
+###Apex Exercise 3: Bulk Triggers###
+
+    trigger bg_contact_count on Contact (after insert) 
+    {
+        Set<Id> accIds=new Set<Id>();
+        for (Contact cont : trigger.new)
+        {
+            if (null!=contact.AccountId)
+            {
+                accIds.add(cont.AccountId);
+            }
+        }
+    
+        List<Account> accs=[select id, Contact_Count__c,
+                             (select id from Contacts) 
+                            from Account 
+                            where id IN :accIds];
+
+        for (Account acc : accs)
+        {                     
+            acc.Contact_Count__c=acc.contacts.size();
+        }
+    
+        update accs;
+    }
