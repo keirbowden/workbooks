@@ -108,6 +108,28 @@ Hint: Testing a Visualforce controller does not involve any interaction with the
 
 Hint: To instantiate an extension controller, you need to pass it an instance of the standard controller, wrapping the standard object. E.g. <code>MyController ctrl=new MyController(new ApexPages.StandardController(new Contact()));</code>
 
-###Summary###
-In this workbook you have used a couple of the features of the Bootstrap responsive web design framework - panels and the responsive grid. Bootstrap provides much more than this, including a rich set of reusable components and more than a dozen JQuery plugins to bring those components to life. As you may have noticed, when using Bootstrap in a Visualforce page, very few of the Visualforce standard components are used, and none of those components that provide layout or styling.
+##Tell me more##
+In this workbook you have carried out simple business process automation through configuration and created Apex triggers and Visualforce pages.  This has only scratched the surface of development with the Salesforce1 platform - here are some resources to help you gain a deeper understanding and start building up your skills as a Salesforce developer:
 
+###Salesforce Workbooks###
+
+The Salesforce workbooks guide you through key functionality through a series of tutorials.
+
+* Force.com Workbook - `https://developer.salesforce.com/docs/atlas.en-us.workbook.meta/workbook/`
+* Apex Workbook - `https://developer.salesforce.com/docs/atlas.en-us.apex_workbook.meta/apex_workbook/`
+* Visualforce Workbook - `https://developer.salesforce.com/docs/atlas.en-us.workbook_vf.meta/workbook_vf/`
+
+Other workbooks are available - `https://developer.salesforce.com/docs?filter_text=workbook&service=All+Services&select_type=&version=32.0&lang=en-us&sort=title`
+
+###Trailhead###
+
+Trailhead (`https://developer.salesforce.com/trailhead`) is an interactive learning system for Salesforce developers, provided by Salesforce. At the time of writing (November 2014) the following trails are available :
+
+* `https://developer.salesforce.com/en/trailhead/trail/force_com_introduction` - Trailhead module for customising without code
+* `https://developer.salesforce.com/en/trailhead/trail/force_com_declarative_beginner` - Trailhead module for developing visual applications without code
+* `https://developer.salesforce.com/en/trailhead/trail/force_com_programmatic_beginner` - Trailhead module for programming on the Salesforce1 platform
+
+###Developer Guides###
+
+* Force.com Apex Code Developers Guide - `https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/`
+* Visualforce Developer's Guide - `https://developer.salesforce.com/docs/atlas.en-us.pages.meta/pages/`
