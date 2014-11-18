@@ -65,7 +65,7 @@ Hint: You will also need to create an email template for use by the workflow act
 
 ###Exercise Set 2: Apex###
 
-###Apex Exercise 1: Trigger###
+###Apex Exercise 1: Create an Apex Trigger###
 
 Users would like to see in the account list view how many contacts are associated with an account. 
 
@@ -76,6 +76,27 @@ Note: Private contacts (not associated with an account) should be unaffected by 
 Hint: A contact is associated with an account if the AccountId field is populated.
 
 Hint: The number of contacts will change when a contact is added, deleted, updated to be associated with a different account or undeleted from the recycle bin.
+
+Hint: To author an Apex trigger, access the Triggers option from the submenu of the sobject in question:
+
+![Apex Trigger Menu](https://lh4.googleusercontent.com/oQkq6ZRJImCZYg4WBN83996fowsn56nvXux5IKBv4FM=w150-h207-p-no)
+
+Hint: Here's an example of a simple trigger to remind you of the syntax:
+
+  ```
+  trigger bg_account_bu on Account (before update) 
+  {
+	  for (Account acc : trigger.new)
+	  {
+  		double version=1;
+	  	if (null!=acc.Version__c)
+		  {
+  			version=acc.Version__c+1;
+	  	}
+		  acc.Version__c=version;
+	  }
+  }
+  ```
 
 ###Apex Exercise 2: Unit Test###
 
