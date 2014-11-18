@@ -111,6 +111,8 @@ Write a unit test for the trigger that covers at least the following scenarios:
 5. A private contact (not associated with an account) is deleted
 6. A private contact (not associated with an account) is updated to associate it with an account
 
+Hint: In order to test the database actions, you will need to insert/update/delete the records in question.
+
 ###Apex Exercise 3: Bulk Triggers###
 
 Triggers need to be able to process up to 200 records at a time without breaching governor limits. 
@@ -123,13 +125,23 @@ Hint: The trigger will need to build a list of affected accounts and then retrie
 
 ###Apex Exercise 1: Standard Controller###
 
-Create a single Visualforce page to display the details of a contact and selected (you choose!) fields from the parent account
+Create a single Visualforce page to display the details of a contact and selected (you choose!) fields from the parent account. You can layout this information using simple HTML elements such as tables.
 
 Hint: To access fields from a parent object use the dot notation to follow the relationship (e.g. Contact.Account.Name)
+
+Hint: Here's an exceptionally simply Visualforce page to demonstrate accessing fields through a standard controller:
+
+```
+  <apex:page StandardController=“Account”>  
+    You are viewing <apex:outputField value=“{!Account.Name}” />
+  </apex:page>
+```
 
 ###Apex Exercise 2: Extension Controller###
 
 Create a single Visualforce page to edit a contact and selected fields from the parent account.  As this needs to save changes to multiple records, an extension controller is required to manage the additional record.
+
+There is an introduction to extension controllers at : http://www.salesforce.com/us/developer/docs/pages/Content/pages_controller_extension.htm
 
 Hint: An extension controller should always delegate to the standard controller wherever possible, so the extension controller should only manage one of these records.
 
@@ -138,6 +150,35 @@ Hint: An extension controller should always delegate to the standard controller 
 Create a unit test for the extension controller created in exercise 2.
 
 Hint: Testing a Visualforce controller does not involve any interaction with the page, instead you would set up the internal state of the controller to reflect the user actions you are simulating and then execute methods to verify behaviour.
+
+Hint: Here's an example unit test for a custom controller to give you a feel for the structure of a test class
+  ```
+@isTest
+private class WrapperExampleController_Test {
+
+    private static testMethod void testController()
+    {
+    	// create a test account
+    	Account acc1=new Account(Name='Unit Test 1', 
+    	                         BillingStreet='Unit Test Street',
+    	                         BillingCity='Unit Testville',
+    	                         BillingPostalCode='UTEST1 1UT');
+    	insert acc1;
+    	
+    	// instantiate the controller
+    	WrapperExampleController ctrl=new WrapperExampleController();
+    	
+    	// check that there is at least one account
+    	Integer accSize=ctrl.getAccounts().size();
+    	System.assert(accSize>=1);
+    	
+    	// the number of rows should be 4 - one for each field
+    	List<WrapperExampleController.RowWrapper> rows=ctrl.getRowWrappers();
+    	System.assertEquals(4, rows.size());
+    }
+}
+
+  ```
 
 Hint: To instantiate an extension controller, you need to pass it an instance of the standard controller, wrapping the standard object. E.g. <code>MyController ctrl=new MyController(new ApexPages.StandardController(new Contact()));</code>
 
